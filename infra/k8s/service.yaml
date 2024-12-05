@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26-srv
+spec:
+  selector:
+    app: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9003
+  type: ClusterIP

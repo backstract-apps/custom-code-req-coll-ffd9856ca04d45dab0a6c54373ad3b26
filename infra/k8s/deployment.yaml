@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26-depl
+  labels:
+    app: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+  template:
+    metadata:
+      labels:
+        app: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+    spec:
+      containers:
+        - name: custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:custom-code-req-coll-ffd9856ca04d45dab0a6c54373ad3b26
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9003
